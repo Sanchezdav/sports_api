@@ -8,6 +8,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    dotenv (3.1.0)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
@@ -46,6 +47,7 @@ PLATFORMS
   arm64-darwin-23
 
 DEPENDENCIES
+  dotenv (~> 3.1)
   rake (~> 13.0)
   rubocop (~> 1.21)
   sports_api!
