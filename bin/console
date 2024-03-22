@@ -12,9 +12,9 @@ Dotenv.load
 # Example:
 # client = SportsApi::Football::Client.new(api_key: ENV["SPORTS_API_KEY"])
 # response = client.connection.get("leagues") or response = client.connection.get("leagues", { id: "1001" })
-# puts response.status
-# puts response.body
-# puts response.headers
+# response.status
+# response.body
+# response.headers
 
 require "irb"
 IRB.start(__FILE__)

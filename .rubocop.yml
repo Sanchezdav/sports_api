@@ -5,7 +5,13 @@ AllCops:
 Gemspec/DevelopmentDependencies:
   Enabled: false
 
+Style/ArgumentsForwarding:
+  Enabled: false
+
 Style/Documentation:
+  Enabled: false
+
+Style/OpenStructUse:
   Enabled: false
 
 Style/StringLiterals:
