@@ -5,6 +5,12 @@ AllCops:
 Gemspec/DevelopmentDependencies:
   Enabled: false
 
+Layout/LineLength:
+  Max: 120
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
 Style/ArgumentsForwarding:
   Enabled: false
 
@@ -21,6 +27,3 @@ Style/StringLiterals:
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120

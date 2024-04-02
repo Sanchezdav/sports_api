@@ -14,13 +14,16 @@ module SportsApi
         @adapter = adapter
       end
 
+      def league
+        LeagueResource.new(self)
+      end
+
       def connection
         @connection ||= Faraday.new do |conn|
           conn.url_prefix = BASE_URL
           conn.request :json
           conn.response :json, content_type: "application/json"
           conn.adapter adapter
-          conn.headers["x-apisports-key"] = api_key
         end
       end
 

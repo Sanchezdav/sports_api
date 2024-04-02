@@ -2,7 +2,7 @@
 
 module SportsApi
   class Collection
-    attr_reader :data, :total, :current
+    attr_reader :data, :total, :current, :results
 
     # Example usage:
     # from_reponse(response, key: "response", type: League)
@@ -12,14 +12,16 @@ module SportsApi
       new(
         data: body[key].map { |attrs| type.new(attrs) },
         total: body.dig("paging", "total"),
-        current: body.dig("paging", "current")
+        current: body.dig("paging", "current"),
+        results: body["paging"]
       )
     end
 
-    def initialize(data:, total:, current:)
+    def initialize(data:, total:, current:, results:)
       @data = data
       @total = total
       @current = current
+      @results = results
     end
   end
 end
