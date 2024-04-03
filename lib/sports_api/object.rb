@@ -8,8 +8,8 @@ module SportsApi
       @attributes = OpenStruct.new(attributes)
     end
 
-    def method_missing(method, *args, &block)
-      attribute = @attributes.send(method, *args, &block)
+    def method_missing(method, *args, &)
+      attribute = @attributes.send(method, *args, &)
       attribute.is_a?(Hash) ? self.class.new(attribute) : attribute
     end
 

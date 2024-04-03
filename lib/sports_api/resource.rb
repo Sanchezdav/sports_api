@@ -9,11 +9,24 @@ module SportsApi
     end
 
     def get_request(path, params: {}, headers: {})
-      client.connection.get(path, params, default_headers.merge(headers))
+      handle_response(client.connection.get(path, params, default_headers.merge(headers)))
     end
+
+    private
 
     def default_headers
       { "x-apisports-key": client.api_key }
+    end
+
+    def handle_response(response)
+      case response.status
+      when 204
+        raise Error, response.body.dig("errors", "bug")
+      when 499, 500
+        raise Error, response.body["message"]
+      end
+
+      response
     end
   end
 end
