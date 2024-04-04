@@ -15,15 +15,15 @@ module SportsApi
     private
 
     def default_headers
-      { "x-apisports-key": client.api_key }
+      { 'x-apisports-key': client.api_key }
     end
 
     def handle_response(response)
       case response.status
       when 204
-        raise Error, response.body.dig("errors", "bug")
+        raise Error, response.body.dig('errors', 'bug')
       when 499, 500
-        raise Error, response.body["message"]
+        raise Error, response.body['message']
       end
 
       response

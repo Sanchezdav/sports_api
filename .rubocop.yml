@@ -22,7 +22,7 @@ Style/OpenStructUse:
 
 Style/StringLiterals:
   Enabled: true
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 
 Style/StringLiteralsInInterpolation:
   Enabled: true
