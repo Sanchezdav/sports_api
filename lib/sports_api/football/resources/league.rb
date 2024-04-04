@@ -10,7 +10,7 @@ module SportsApi
 
       def find(id:)
         response = get_request('leagues', params: { id: id.to_s })
-        SportsApi::Football::League.new(response.body).response[0]
+        SportsApi::Football::League.new(response.body['response'][0])
       end
     end
   end
