@@ -1,34 +1,74 @@
 # SportsApi
 
-TODO: Delete this and the text below, and describe your gem
+The `sports_api` gem provides a convenient Ruby interface to interact with the [api-sports.io](https://api-sports.io/) sports statistics, live scores, and predictions API. It allows developers to easily integrate sports data into their Ruby applications with minimal effort.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sports_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+It currently supports the V3 of [api-sports.io](https://api-sports.io/).
+
+## Features
+
+- Access to a wide range of sports statistics, including live scores and predictions.
+- Simple and intuitive API wrapper for seamless integration into Ruby projects.
+- Supports various sports categories such as football, basketball, baseball, and more.
+- Easy-to-use methods for fetching data.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add this line to your application's Gemfile:
 
-Install the gem and add to the application's Gemfile by executing:
+    gem 'sports_api', github: "Sanchezdav/sports_api"
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+And then execute:
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+    $ bundle
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+Or install it yourself as:
+
+    $ gem install sports_api
+
 
 ## Usage
 
-TODO: Write usage instructions here
+To access the API, you'll need to create a client and pass in your API key. You can find your API key at [https://dashboard.api-football.com/profile](https://dashboard.api-football.com/profile?access), example:
+
+```ruby
+client = SportsApi::Football::Client.new(api_key: ENV["SPORTS_API_KEY"])
+```
+
+The client then gives you access to each of the resources.
+
+## Resources
+
+The gem maps as closely as we can to the Sports API so you can easily convert API examples to gem code.
+
+Responses are created as objects like `SportsApi::Football::League`. They're built using OpenStruct so you can easily access data in a Ruby-ish way.
+
+### Football
+
+#### League
+
+```ruby
+client.league.list
+client.league.list(code: "MX", season: "2023")
+client.league.find(id: 262)
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment, for example:
+
+```ruby
+# Create your client
+client = SportsApi::Football::Client.new(api_key: ENV["SPORTS_API_KEY"])
+
+# List all leagues
+client.league.list
+```
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sports_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/sports_api/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/Sanchezdav/sports_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[Sanchezdav/sports_api/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -36,4 +76,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the SportsApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/sports_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the SportsApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Sanchezdav/sports_api/blob/master/CODE_OF_CONDUCT.md).
