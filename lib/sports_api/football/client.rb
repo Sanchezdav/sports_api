@@ -25,6 +25,10 @@ module SportsApi
         TimezoneResource.new(self)
       end
 
+      def country
+        CountryResource.new(self)
+      end
+
       def connection
         @connection ||= Faraday.new do |conn|
           conn.url_prefix = BASE_URL

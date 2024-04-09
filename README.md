@@ -44,6 +44,15 @@ Responses are created as objects like `SportsApi::Football::League`. They're bui
 
 ### Football
 
+#### Country
+
+```ruby
+client.country.list
+client.country.list(search: "Mex")
+client.country.find_by_code(code: "MX")
+client.country.find_by_name(name: "Mexico")
+```
+
 #### League
 
 ```ruby

@@ -1,0 +1,28 @@
+{
+  "get": "countries",
+  "parameters": {
+  },
+  "errors": [ ],
+  "results": 3,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "name": "England",
+      "code": "GB",
+      "flag": "https://media.api-sports.io/flags/gb.svg"
+    },
+    {
+      "name": "Mexico",
+      "code": "MX",
+      "flag": "https://media.api-sports.io/flags/mx.svg"
+    },
+    {
+      "name": "Venezuela",
+      "code": "VE",
+      "flag": "https://media.api-sports.io/flags/ve.svg"
+    }
+  ]
+}
