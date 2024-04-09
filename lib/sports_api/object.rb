@@ -5,7 +5,8 @@ require 'ostruct'
 module SportsApi
   class Object
     def initialize(attributes)
-      @attributes = OpenStruct.new(attributes)
+      attrs = attributes.is_a?(String) ? { value: attributes } : attributes
+      @attributes = OpenStruct.new(attrs)
     end
 
     def method_missing(method, *args, &)
