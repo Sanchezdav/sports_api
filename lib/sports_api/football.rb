@@ -10,9 +10,11 @@ module SportsApi
     autoload :League, 'sports_api/football/objects/league'
     autoload :Timezone, 'sports_api/football/objects/timezone'
     autoload :Country, 'sports_api/football/objects/country'
+    autoload :Team, 'sports_api/football/objects/team'
 
     autoload :LeagueResource, 'sports_api/football/resources/league'
     autoload :TimezoneResource, 'sports_api/football/resources/timezone'
     autoload :CountryResource, 'sports_api/football/resources/country'
+    autoload :TeamResource, 'sports_api/football/resources/team'
   end
 end

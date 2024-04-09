@@ -12,17 +12,19 @@ module SportsApi
 
       new(
         data: body[key].map { |attrs| type.new(attrs) },
-        total: body.dig('paging', 'total'),
-        current: body.dig('paging', 'current'),
-        results: body['paging']
+        total: body['results'],
+        paging: body['paging'],
+        paging_total: body.dig('paging', 'total'),
+        paging_current: body.dig('paging', 'current')
       )
     end
 
-    def initialize(data:, total:, current:, results:)
+    def initialize(data:, total:, paging:, paging_total:, paging_current:)
       @data = data
       @total = total
-      @current = current
-      @results = results
+      @paging = paging
+      @paging_total = paging_total
+      @paging_current = paging_current
     end
   end
 end

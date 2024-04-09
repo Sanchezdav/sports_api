@@ -6,10 +6,10 @@ class TimezoneResourceTest < Minitest::Test
   def test_list
     stub = stub_request('timezone', response: stub_response(fixture: 'football/timezones/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    timezones = client.timezone.list
+    response = client.timezone.list
 
-    assert_equal SportsApi::Collection, timezones.class
-    assert_equal SportsApi::Football::Timezone, timezones.data.first.class
-    assert_equal 1, timezones.total
+    assert_equal SportsApi::Collection, response.class
+    assert_equal SportsApi::Football::Timezone, response.data.first.class
+    assert_equal 5, response.total
   end
 end

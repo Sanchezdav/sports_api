@@ -61,6 +61,14 @@ client.league.list(code: "MX", season: "2023")
 client.league.find(id: 262)
 ```
 
+#### Team
+
+```ruby
+client.team.list
+client.team.list(country: "Mexico")
+client.team.find(id: 2287)
+```
+
 #### Timezone
 
 ```ruby

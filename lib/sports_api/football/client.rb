@@ -29,6 +29,10 @@ module SportsApi
         CountryResource.new(self)
       end
 
+      def team
+        TeamResource.new(self)
+      end
+
       def connection
         @connection ||= Faraday.new do |conn|
           conn.url_prefix = BASE_URL

@@ -6,21 +6,21 @@ class CountryResourceTest < Minitest::Test
   def test_list
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    countries = client.country.list
+    response = client.country.list
 
-    assert_equal SportsApi::Collection, countries.class
-    assert_equal SportsApi::Football::Country, countries.data.first.class
-    assert_equal 1, countries.total
+    assert_equal SportsApi::Collection, response.class
+    assert_equal SportsApi::Football::Country, response.data.first.class
+    assert_equal 3, response.total
   end
 
   def test_list_by_search
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/list_by_search'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    countries = client.country.list(search: 'Mex')
+    response = client.country.list(search: 'Mex')
 
-    assert_equal SportsApi::Collection, countries.class
-    assert_equal SportsApi::Football::Country, countries.data.first.class
-    assert_equal 'Mexico', countries.data.first.name
+    assert_equal SportsApi::Collection, response.class
+    assert_equal SportsApi::Football::Country, response.data.first.class
+    assert_equal 'Mexico', response.data.first.name
   end
 
   def test_find_by_code
