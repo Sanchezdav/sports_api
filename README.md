@@ -61,6 +61,12 @@ client.league.list(code: "MX", season: 2023)
 client.league.find(id: 262)
 ```
 
+#### League Season
+
+```ruby
+client.league_season.list
+```
+
 #### Team
 
 ```ruby

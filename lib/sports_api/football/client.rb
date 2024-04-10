@@ -21,6 +21,10 @@ module SportsApi
         LeagueResource.new(self)
       end
 
+      def league_season
+        LeagueSeasonResource.new(self)
+      end
+
       def timezone
         TimezoneResource.new(self)
       end
