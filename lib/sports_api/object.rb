@@ -12,12 +12,12 @@ module SportsApi
 
     def transform_attributes(attributes)
       case attributes
-      when String
-        { value: attributes }
+      when Hash
+        attributes
       when Array
         attributes.each_with_index.to_h { |val, i| [i, val] }
       else
-        attributes
+        { value: attributes }
       end
     end
 

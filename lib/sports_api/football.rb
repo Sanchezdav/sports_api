@@ -12,11 +12,13 @@ module SportsApi
     autoload :Country, 'sports_api/football/objects/country'
     autoload :Team, 'sports_api/football/objects/teams/team'
     autoload :TeamStatistic, 'sports_api/football/objects/teams/team_statistic'
+    autoload :TeamSeason, 'sports_api/football/objects/teams/team_season'
 
     autoload :LeagueResource, 'sports_api/football/resources/league'
     autoload :TimezoneResource, 'sports_api/football/resources/timezone'
     autoload :CountryResource, 'sports_api/football/resources/country'
     autoload :TeamResource, 'sports_api/football/resources/teams/team'
     autoload :TeamStatisticResource, 'sports_api/football/resources/teams/team_statistic'
+    autoload :TeamSeasonResource, 'sports_api/football/resources/teams/team_season'
   end
 end

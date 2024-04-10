@@ -75,6 +75,12 @@ client.team.find(id: 2287)
 client.team_statistic.find(league: 39, team: 33, season: 2019)
 ```
 
+#### Team Season
+
+```ruby
+client.team_season.list(team: 2287)
+```
+
 #### Timezone
 
 ```ruby
