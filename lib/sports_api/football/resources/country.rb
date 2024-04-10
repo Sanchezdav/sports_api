@@ -5,8 +5,8 @@ module SportsApi
     class CountryResource < Resource
       # Arguments:
       # name: [String](optional) - The name of the country.
-      # code: [String] (optional) - The country code.
-      # search: [String] (optional) - The country name, can be some letters.
+      # code: [String] (optional) - The country code (= XXX).
+      # search: [String] (optional) - The country name, can be some letters (>= XXX).
       def list(**params)
         response = get_request('countries', params:)
         Collection.from_response(response, type: SportsApi::Football::Country)

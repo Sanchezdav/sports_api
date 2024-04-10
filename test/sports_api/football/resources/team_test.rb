@@ -4,7 +4,7 @@ require 'test_helper'
 
 class TeamResourceTest < Minitest::Test
   def test_list
-    stub = stub_request('teams', response: stub_response(fixture: 'football/teams/list'))
+    stub = stub_request('teams', response: stub_response(fixture: 'football/teams/team/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.team.list
 
@@ -14,7 +14,7 @@ class TeamResourceTest < Minitest::Test
   end
 
   def test_find
-    stub = stub_request('teams', response: stub_response(fixture: 'football/teams/find'))
+    stub = stub_request('teams', response: stub_response(fixture: 'football/teams/team/find'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.team.find(id: 2287)
 

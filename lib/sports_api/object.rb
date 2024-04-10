@@ -3,19 +3,33 @@
 require 'ostruct'
 
 module SportsApi
-  class Object
+  class Object < OpenStruct
     def initialize(attributes)
-      attrs = attributes.is_a?(String) ? { value: attributes } : attributes
-      @attributes = OpenStruct.new(attrs)
+      super(to_ostruct(transform_attributes(attributes)))
     end
 
-    def method_missing(method, *args, &)
-      attribute = @attributes.send(method, *args, &)
-      attribute.is_a?(Hash) ? self.class.new(attribute) : attribute
+    private
+
+    def transform_attributes(attributes)
+      case attributes
+      when String
+        { value: attributes }
+      when Array
+        attributes.each_with_index.to_h { |val, i| [i, val] }
+      else
+        attributes
+      end
     end
 
-    def respond_to_missing?(method, include_private = false)
-      true
+    def to_ostruct(obj)
+      case obj
+      when Hash
+        OpenStruct.new(obj.transform_values { |val| to_ostruct(val) })
+      when Array
+        obj.map { |o| to_ostruct(o) }
+      else
+        obj
+      end
     end
   end
 end

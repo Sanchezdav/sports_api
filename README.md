@@ -57,7 +57,7 @@ client.country.find_by_name(name: "Mexico")
 
 ```ruby
 client.league.list
-client.league.list(code: "MX", season: "2023")
+client.league.list(code: "MX", season: 2023)
 client.league.find(id: 262)
 ```
 
@@ -67,6 +67,12 @@ client.league.find(id: 262)
 client.team.list
 client.team.list(country: "Mexico")
 client.team.find(id: 2287)
+```
+
+#### Team Statistic
+
+```ruby
+client.team_statistic.find(league: 39, team: 33, season: 2019)
 ```
 
 #### Timezone
