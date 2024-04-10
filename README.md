@@ -69,6 +69,12 @@ client.team.list(country: "Mexico")
 client.team.find(id: 2287)
 ```
 
+#### Team Country
+
+```ruby
+client.team_country.list
+```
+
 #### Team Statistic
 
 ```ruby
