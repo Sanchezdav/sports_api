@@ -4,10 +4,10 @@ module SportsApi
   module Football
     class TeamResource < Resource
       # Arguments:
-      # id: [String](optional) - The team ID.
+      # id: [Integer](optional) - The team ID.
       # name: [String](optional) - The name of the team.
-      # league: [String](optional) - The league ID.
-      # season: [String](optional) - The season year (= YYYY).
+      # league: [Integer](optional) - The league ID.
+      # season: [Integer](optional) - The season year (= YYYY).
       # country: [String] (optional) - The name of the country.
       # code: [String] (optional) - The country code (= XXX).
       # venue: [String] (optional) - The venue ID.

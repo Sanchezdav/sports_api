@@ -4,9 +4,9 @@ module SportsApi
   module Football
     class TeamStatisticResource < Resource
       # Arguments:
-      # league: [String](required) - The league ID.
-      # season: [String](required) - The season year (= YYYY).
-      # team: [String](required) - The team ID.
+      # league: [Integer](required) - The league ID.
+      # season: [Integer](required) - The season year (= YYYY).
+      # team: [Integer](required) - The team ID.
       # date: [String](optional) - The limit date (YYYY-MM-DD).
       def find(league:, season:, team:, date: nil)
         params = {

@@ -4,9 +4,9 @@ module SportsApi
   module Football
     class StandingResource < Resource
       # Arguments:
-      # league: [String](optional) - The league ID.
-      # season: [String] (required) - The season of the league (= YYYY).
-      # team: [String] (optional) - The team ID.
+      # league: [Integer](optional) - The league ID.
+      # season: [Integer] (required) - The season of the league (= YYYY).
+      # team: [Integer] (optional) - The team ID.
       def list(season:, **params)
         response = get_request('standings', params: { season: season.to_s, **params })
         Collection.from_response(response, type: SportsApi::Football::Standing)

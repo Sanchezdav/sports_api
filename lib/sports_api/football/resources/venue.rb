@@ -4,7 +4,7 @@ module SportsApi
   module Football
     class VenueResource < Resource
       # Arguments:
-      # id: [String](optional) - The venue ID.
+      # id: [Integer](optional) - The venue ID.
       # name: [String](optional) - The name of the venue.
       # city: [String](optional) - The city of the venue.
       # country: [String] (optional) - The country name of the venue.

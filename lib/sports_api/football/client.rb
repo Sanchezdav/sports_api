@@ -57,6 +57,10 @@ module SportsApi
         StandingResource.new(self)
       end
 
+      def fixture_round
+        FixtureRoundResource.new(self)
+      end
+
       def connection
         @connection ||= Faraday.new do |conn|
           conn.url_prefix = BASE_URL
