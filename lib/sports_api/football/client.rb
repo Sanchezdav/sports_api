@@ -57,6 +57,10 @@ module SportsApi
         StandingResource.new(self)
       end
 
+      def fixture
+        FixtureResource.new(self)
+      end
+
       def fixture_round
         FixtureRoundResource.new(self)
       end

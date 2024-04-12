@@ -10,7 +10,7 @@ module SportsApi
       # season: [Integer](optional) - The season year (= YYYY).
       # country: [String] (optional) - The name of the country.
       # code: [String] (optional) - The country code (= XXX).
-      # venue: [String] (optional) - The venue ID.
+      # venue: [Integer] (optional) - The venue ID.
       # search: [String] (optional) - The team or country name, can be some letters (>= XXX).
       def list(**params)
         response = get_request('teams', params:)

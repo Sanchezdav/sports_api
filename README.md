@@ -53,6 +53,13 @@ client.country.find_by_code(code: "MX")
 client.country.find_by_name(name: "Mexico")
 ```
 
+#### Fixture
+
+```ruby
+client.fixture.list(live: "all", league: 262)
+client.fixture.find(id: 1187546)
+```
+
 #### Fixture Round
 
 ```ruby
