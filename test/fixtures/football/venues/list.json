@@ -1,0 +1,34 @@
+{
+  "get": "venues",
+  "parameters": {
+    "search": "Mex"
+  },
+  "errors": [],
+  "results": 2,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "id": 1069,
+      "name": "Estadio Azteca",
+      "address": "Calzada de Tlalpan 3665, Coyoacán",
+      "city": "D.F.",
+      "country": "Mexico",
+      "capacity": 106187,
+      "surface": "grass",
+      "image": "https://media.api-sports.io/football/venues/1069.png"
+    },
+    {
+      "id": 1076,
+      "name": "Estadio AKRON",
+      "address": "Avenida Circuito JVC Número 2800, Centro JVC",
+      "city": "Zapopan",
+      "country": "Mexico",
+      "capacity": 46609,
+      "surface": "artificial turf",
+      "image": "https://media.api-sports.io/football/venues/1076.png"
+    }
+  ]
+}

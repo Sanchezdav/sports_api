@@ -99,6 +99,13 @@ client.team_season.list(team: 2287)
 client.timezone.list
 ```
 
+#### Venue
+
+```ruby
+client.venue.list(search: "Mex")
+client.venue.find(id: 556)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment, for example:

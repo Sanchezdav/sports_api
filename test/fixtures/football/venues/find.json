@@ -1,0 +1,24 @@
+{
+  "get": "venues",
+  "parameters": {
+    "id": "1069"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "id": 1069,
+      "name": "Estadio Azteca",
+      "address": "Calzada de Tlalpan 3665, Coyoacán",
+      "city": "D.F.",
+      "country": "Mexico",
+      "capacity": 106187,
+      "surface": "grass",
+      "image": "https://media.api-sports.io/football/venues/1069.png"
+    }
+  ]
+}

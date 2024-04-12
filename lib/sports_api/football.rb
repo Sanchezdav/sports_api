@@ -15,6 +15,7 @@ module SportsApi
     autoload :TeamStatistic, 'sports_api/football/objects/teams/team_statistic'
     autoload :TeamSeason, 'sports_api/football/objects/teams/team_season'
     autoload :TeamCountry, 'sports_api/football/objects/teams/team_country'
+    autoload :Venue, 'sports_api/football/objects/venue'
 
     autoload :LeagueResource, 'sports_api/football/resources/leagues/league'
     autoload :LeagueSeasonResource, 'sports_api/football/resources/leagues/league_season'
@@ -24,5 +25,6 @@ module SportsApi
     autoload :TeamStatisticResource, 'sports_api/football/resources/teams/team_statistic'
     autoload :TeamSeasonResource, 'sports_api/football/resources/teams/team_season'
     autoload :TeamCountryResource, 'sports_api/football/resources/teams/team_country'
+    autoload :VenueResource, 'sports_api/football/resources/venue'
   end
 end
