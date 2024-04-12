@@ -67,6 +67,12 @@ client.league.find(id: 262)
 client.league_season.list
 ```
 
+#### Standing
+
+```ruby
+client.standing.list(season: 2023, team: 2287)
+```
+
 #### Team
 
 ```ruby
