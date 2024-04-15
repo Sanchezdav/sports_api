@@ -36,6 +36,9 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   spec.add_dependency 'faraday', '~> 2.9'
   spec.add_development_dependency 'dotenv', '~>3.1'
+  spec.add_development_dependency 'rubocop', '~> 1.21'
+  spec.add_development_dependency 'rubocop-minitest', '~> 0.35'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.6'
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
