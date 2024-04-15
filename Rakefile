@@ -2,16 +2,10 @@
 
 require 'bundler/gem_tasks'
 require 'rake/testtask'
-require 'rubocop/rake_task'
 
-task default: %w[lint test]
+task default: %w[test]
 
 Rake::TestTask.new do |task|
   task.libs << 'test'
   task.test_files = FileList['test/**/*_test.rb']
-end
-
-RuboCop::RakeTask.new(:lint) do |task|
-  task.patterns = ['lib/**/*.rb', 'test/**/*.rb']
-  task.fail_on_error = false
 end
