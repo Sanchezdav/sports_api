@@ -1,3 +1,7 @@
+require:
+  - rubocop-minitest
+  - rubocop-rake
+
 AllCops:
   TargetRubyVersion: 3.2.2
   NewCops: enable
@@ -12,6 +16,9 @@ Lint/UnusedMethodArgument:
   Enabled: false
 
 Metrics/MethodLength:
+  Enabled: false
+
+Minitest/MultipleAssertions:
   Enabled: false
 
 Style/ArgumentsForwarding:

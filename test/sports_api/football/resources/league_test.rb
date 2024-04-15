@@ -8,8 +8,8 @@ class LeagueResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.league.list
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::League, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::League, response.data.first
     assert_equal 1, response.total
   end
 
@@ -18,7 +18,7 @@ class LeagueResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.league.find(id: 262)
 
-    assert_equal SportsApi::Football::League, response.class
+    assert_instance_of SportsApi::Football::League, response
     assert_equal 262, response.league.id
     assert_equal 'Liga MX', response.league.name
     assert_equal 'Mexico', response.country.name

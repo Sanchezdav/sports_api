@@ -8,7 +8,7 @@ class TeamStatisticResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.team_statistic.find(league: 39, team: 33, season: 2019)
 
-    assert_equal SportsApi::Football::TeamStatistic, response.class
+    assert_instance_of SportsApi::Football::TeamStatistic, response
     assert_equal 39, response.league.id
     assert_equal 33, response.team.id
   end

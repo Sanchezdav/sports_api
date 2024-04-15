@@ -8,8 +8,8 @@ class CountryResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.country.list
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::Country, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::Country, response.data.first
     assert_equal 3, response.total
   end
 
@@ -18,8 +18,8 @@ class CountryResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.country.list(search: 'Mex')
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::Country, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::Country, response.data.first
     assert_equal 'Mexico', response.data.first.name
   end
 
@@ -28,7 +28,7 @@ class CountryResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     country = client.country.find_by_code(code: 'MX')
 
-    assert_equal SportsApi::Football::Country, country.class
+    assert_instance_of SportsApi::Football::Country, country
     assert_equal 'Mexico', country.name
     assert_equal 'MX', country.code
   end
@@ -38,7 +38,7 @@ class CountryResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     country = client.country.find_by_name(name: 'Mexico')
 
-    assert_equal SportsApi::Football::Country, country.class
+    assert_instance_of SportsApi::Football::Country, country
     assert_equal 'Mexico', country.name
     assert_equal 'MX', country.code
   end

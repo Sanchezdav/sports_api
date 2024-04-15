@@ -8,8 +8,8 @@ class FixtureResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.fixture.list(live: 'all')
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::Fixture, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::Fixture, response.data.first
     assert_equal 1, response.total
   end
 
@@ -18,7 +18,7 @@ class FixtureResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.fixture.find(id: '239625')
 
-    assert_equal SportsApi::Football::Fixture, response.class
+    assert_instance_of SportsApi::Football::Fixture, response
     assert_equal 239_625, response.fixture.id
     assert_equal 'Botola Pro', response.league.name
     assert_equal 0, response.goals.home

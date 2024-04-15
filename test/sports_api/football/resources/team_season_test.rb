@@ -8,8 +8,8 @@ class TeamSeasonResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.team_season.list(team: 33)
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::TeamSeason, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::TeamSeason, response.data.first
     assert_equal 1, response.total
   end
 end

@@ -8,8 +8,8 @@ class VenueResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.venue.list(search: 'Mex')
 
-    assert_equal SportsApi::Collection, response.class
-    assert_equal SportsApi::Football::Venue, response.data.first.class
+    assert_instance_of SportsApi::Collection, response
+    assert_instance_of SportsApi::Football::Venue, response.data.first
     assert_equal 2, response.total
   end
 
@@ -18,7 +18,7 @@ class VenueResourceTest < Minitest::Test
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.venue.find(id: 1069)
 
-    assert_equal SportsApi::Football::Venue, response.class
+    assert_instance_of SportsApi::Football::Venue, response
     assert_equal 1069, response.id
     assert_equal 'Estadio Azteca', response.name
     assert_equal 'Mexico', response.country
