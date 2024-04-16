@@ -78,6 +78,12 @@ client.fixture_head_to_head.list(h2h: "2287-2278")
 client.fixture_statistic.list(fixture: '463')
 ```
 
+#### Fixture Event
+
+```ruby
+client.fixture_event.list(fixture: '215662')
+```
+
 #### League
 
 ```ruby
