@@ -84,6 +84,12 @@ client.fixture_statistic.list(fixture: '463')
 client.fixture_event.list(fixture: '215662')
 ```
 
+#### Fixture Lineup
+
+```ruby
+client.fixture_lineup.list(fixture: '592872')
+```
+
 #### League
 
 ```ruby
