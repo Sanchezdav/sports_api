@@ -72,6 +72,12 @@ client.fixture_round.list(league: 262, season: 2023)
 client.fixture_head_to_head.list(h2h: "2287-2278")
 ```
 
+#### Fixture Statistic
+
+```ruby
+client.fixture_statistic.list(fixture: '463')
+```
+
 #### League
 
 ```ruby

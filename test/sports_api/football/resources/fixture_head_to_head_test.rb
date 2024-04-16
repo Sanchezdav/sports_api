@@ -2,9 +2,11 @@
 
 require 'test_helper'
 
-class TeamResourceTest < Minitest::Test
+class FixtureHeadToHeadResourceTest < Minitest::Test
   def test_list
-    stub = stub_request('teams', response: stub_response(fixture: 'football/fixtures/fixture_head_to_head/list'))
+    stub = stub_request(
+      'fixtures/headtohead', response: stub_response(fixture: 'football/fixtures/fixture_head_to_head/list')
+    )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
     response = client.fixture_head_to_head.list(h2h: '33-34')
 
