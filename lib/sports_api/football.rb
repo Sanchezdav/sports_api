@@ -9,6 +9,7 @@ module SportsApi
 
     autoload :Country, 'sports_api/football/objects/country'
     autoload :Fixture, 'sports_api/football/objects/fixtures/fixture'
+    autoload :FixtureHeadToHead, 'sports_api/football/objects/fixtures/fixture_head_to_head'
     autoload :FixtureRound, 'sports_api/football/objects/fixtures/fixture_round'
     autoload :League, 'sports_api/football/objects/leagues/league'
     autoload :LeagueSeason, 'sports_api/football/objects/leagues/league_season'
@@ -22,6 +23,7 @@ module SportsApi
 
     autoload :CountryResource, 'sports_api/football/resources/country'
     autoload :FixtureResource, 'sports_api/football/resources/fixtures/fixture'
+    autoload :FixtureHeadToHeadResource, 'sports_api/football/resources/fixtures/fixture_head_to_head'
     autoload :FixtureRoundResource, 'sports_api/football/resources/fixtures/fixture_round'
     autoload :LeagueResource, 'sports_api/football/resources/leagues/league'
     autoload :LeagueSeasonResource, 'sports_api/football/resources/leagues/league_season'
