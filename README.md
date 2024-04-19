@@ -123,6 +123,13 @@ client.league.find(id: 262)
 client.league_season.list
 ```
 
+#### Player Season
+
+```ruby
+client.player_season.list
+client.player_season.list(player: 276)
+```
+
 #### Prediction
 
 ```ruby
