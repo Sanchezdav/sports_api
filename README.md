@@ -96,6 +96,12 @@ client.fixture_lineup.list(fixture: '592872')
 client.fixture_player_statistic.list(fixture: '169080', team: 2284)
 ```
 
+#### Injury
+
+```ruby
+client.injury.list(fixture: '686314')
+```
+
 #### League
 
 ```ruby
