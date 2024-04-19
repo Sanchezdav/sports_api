@@ -89,6 +89,10 @@ module SportsApi
         InjuryResource.new(self)
       end
 
+      def player
+        PlayerResource.new(self)
+      end
+
       def player_season
         PlayerSeasonResource.new(self)
       end
