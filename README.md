@@ -44,6 +44,13 @@ Responses are created as objects like `SportsApi::Football::League`. They're bui
 
 ### Football
 
+#### Coach
+
+```ruby
+client.coach.list(search: 'Tuchel')
+client.coach.find(id: 40)
+```
+
 #### Country
 
 ```ruby

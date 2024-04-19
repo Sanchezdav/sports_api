@@ -93,6 +93,10 @@ module SportsApi
         PredictionResource.new(self)
       end
 
+      def coach
+        CoachResource.new(self)
+      end
+
       def connection
         @connection ||= Faraday.new do |conn|
           conn.url_prefix = BASE_URL

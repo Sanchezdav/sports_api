@@ -7,6 +7,7 @@ module SportsApi
     autoload :Object, 'sports_api/object'
     autoload :Resource, 'sports_api/resource'
 
+    autoload :Coach, 'sports_api/football/objects/coach'
     autoload :Country, 'sports_api/football/objects/country'
     autoload :Fixture, 'sports_api/football/objects/fixtures/fixture'
     autoload :FixtureEvent, 'sports_api/football/objects/fixtures/fixture_event'
@@ -27,6 +28,7 @@ module SportsApi
     autoload :Timezone, 'sports_api/football/objects/timezone'
     autoload :Venue, 'sports_api/football/objects/venue'
 
+    autoload :CoachResource, 'sports_api/football/resources/coach'
     autoload :CountryResource, 'sports_api/football/resources/country'
     autoload :FixtureResource, 'sports_api/football/resources/fixtures/fixture'
     autoload :FixtureEventResource, 'sports_api/football/resources/fixtures/fixture_event'
