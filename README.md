@@ -116,6 +116,12 @@ client.league.find(id: 262)
 client.league_season.list
 ```
 
+#### Prediction
+
+```ruby
+client.prediction.list(fixture: '198772')
+```
+
 #### Standing
 
 ```ruby
