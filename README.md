@@ -137,6 +137,12 @@ client.player_season.list
 client.player_season.list(player: 276)
 ```
 
+#### Player Squad
+
+```ruby
+client.player_squad.list(team: 33)
+```
+
 #### Prediction
 
 ```ruby

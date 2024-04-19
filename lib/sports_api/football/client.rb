@@ -97,6 +97,10 @@ module SportsApi
         PlayerSeasonResource.new(self)
       end
 
+      def player_squad
+        PlayerSquadResource.new(self)
+      end
+
       def prediction
         PredictionResource.new(self)
       end
