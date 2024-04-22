@@ -143,6 +143,12 @@ client.player_season.list(player: 276)
 client.player_squad.list(team: 33)
 ```
 
+#### Player Top Scorer
+
+```ruby
+client.player_top_scorer.list(league: 262, season: 2023)
+```
+
 #### Prediction
 
 ```ruby

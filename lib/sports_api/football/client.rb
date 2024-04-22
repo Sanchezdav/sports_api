@@ -93,6 +93,10 @@ module SportsApi
         PlayerResource.new(self)
       end
 
+      def player_top_scorer
+        PlayerTopScorerResource.new(self)
+      end
+
       def player_season
         PlayerSeasonResource.new(self)
       end
