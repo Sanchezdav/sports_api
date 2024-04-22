@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class PlayerTopAssistResourceTest < Minitest::Test
+class PlayerTopYellowCardResourceTest < Minitest::Test
   def test_list
     stub = stub_request(
       'players/topyellowcards',
