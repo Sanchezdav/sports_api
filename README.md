@@ -155,6 +155,12 @@ client.player_top_assist.list(league: 262, season: 2023)
 client.player_top_scorer.list(league: 262, season: 2023)
 ```
 
+#### Player Top Yellow Card
+
+```ruby
+client.player_top_yellow_card.list(league: 262, season: 2023)
+```
+
 #### Prediction
 
 ```ruby

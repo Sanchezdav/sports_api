@@ -101,6 +101,10 @@ module SportsApi
         PlayerTopScorerResource.new(self)
       end
 
+      def player_top_yellow_card
+        PlayerTopYellowCardResource.new(self)
+      end
+
       def player_season
         PlayerSeasonResource.new(self)
       end
