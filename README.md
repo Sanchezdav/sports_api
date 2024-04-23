@@ -173,6 +173,12 @@ client.player_top_yellow_card.list(league: 262, season: 2023)
 client.prediction.list(fixture: '198772')
 ```
 
+#### Sidelined
+
+```ruby
+client.sidelined.list(player: 35603)
+```
+
 #### Standing
 
 ```ruby

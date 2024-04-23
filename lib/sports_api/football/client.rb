@@ -98,6 +98,10 @@ module SportsApi
         PredictionResource.new(self)
       end
 
+      def sidelined
+        SidelinedResource.new(self)
+      end
+
       def standing
         StandingResource.new(self)
       end
