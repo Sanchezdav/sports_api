@@ -211,6 +211,12 @@ client.team_season.list(team: 2287)
 client.timezone.list
 ```
 
+#### Transfer
+
+```ruby
+client.transfer.list(team: 2287)
+```
+
 #### Venue
 
 ```ruby

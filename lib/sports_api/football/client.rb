@@ -4,6 +4,7 @@ require 'faraday'
 
 module SportsApi
   module Football
+    # rubocop:disable Metrics/ClassLength
     class Client
       BASE_URL = 'https://v3.football.api-sports.io/'
 
@@ -17,44 +18,12 @@ module SportsApi
         @stubs = stubs
       end
 
-      def league
-        LeagueResource.new(self)
-      end
-
-      def league_season
-        LeagueSeasonResource.new(self)
-      end
-
-      def timezone
-        TimezoneResource.new(self)
+      def coach
+        CoachResource.new(self)
       end
 
       def country
         CountryResource.new(self)
-      end
-
-      def team
-        TeamResource.new(self)
-      end
-
-      def team_statistic
-        TeamStatisticResource.new(self)
-      end
-
-      def team_season
-        TeamSeasonResource.new(self)
-      end
-
-      def team_country
-        TeamCountryResource.new(self)
-      end
-
-      def venue
-        VenueResource.new(self)
-      end
-
-      def standing
-        StandingResource.new(self)
       end
 
       def fixture
@@ -89,6 +58,14 @@ module SportsApi
         InjuryResource.new(self)
       end
 
+      def league
+        LeagueResource.new(self)
+      end
+
+      def league_season
+        LeagueSeasonResource.new(self)
+      end
+
       def player
         PlayerResource.new(self)
       end
@@ -121,8 +98,36 @@ module SportsApi
         PredictionResource.new(self)
       end
 
-      def coach
-        CoachResource.new(self)
+      def standing
+        StandingResource.new(self)
+      end
+
+      def team
+        TeamResource.new(self)
+      end
+
+      def team_statistic
+        TeamStatisticResource.new(self)
+      end
+
+      def team_season
+        TeamSeasonResource.new(self)
+      end
+
+      def team_country
+        TeamCountryResource.new(self)
+      end
+
+      def timezone
+        TimezoneResource.new(self)
+      end
+
+      def transfer
+        TransferResource.new(self)
+      end
+
+      def venue
+        VenueResource.new(self)
       end
 
       def connection
@@ -138,5 +143,6 @@ module SportsApi
         '#<SportsApi::Football::Client>'
       end
     end
+    # rubocop:enable Metrics/ClassLength
   end
 end

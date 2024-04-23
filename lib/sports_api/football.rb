@@ -33,6 +33,7 @@ module SportsApi
     autoload :TeamSeason, 'sports_api/football/objects/teams/team_season'
     autoload :TeamStatistic, 'sports_api/football/objects/teams/team_statistic'
     autoload :Timezone, 'sports_api/football/objects/timezone'
+    autoload :Transfer, 'sports_api/football/objects/transfer'
     autoload :Venue, 'sports_api/football/objects/venue'
 
     autoload :CoachResource, 'sports_api/football/resources/coach'
@@ -61,6 +62,7 @@ module SportsApi
     autoload :TeamSeasonResource, 'sports_api/football/resources/teams/team_season'
     autoload :TeamStatisticResource, 'sports_api/football/resources/teams/team_statistic'
     autoload :TimezoneResource, 'sports_api/football/resources/timezone'
+    autoload :TransferResource, 'sports_api/football/resources/transfer'
     autoload :VenueResource, 'sports_api/football/resources/venue'
   end
 end
