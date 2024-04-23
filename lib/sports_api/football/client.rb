@@ -126,6 +126,10 @@ module SportsApi
         TransferResource.new(self)
       end
 
+      def trophy
+        TrophyResource.new(self)
+      end
+
       def venue
         VenueResource.new(self)
       end

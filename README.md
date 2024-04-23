@@ -217,6 +217,12 @@ client.timezone.list
 client.transfer.list(team: 2287)
 ```
 
+#### Trophy
+
+```ruby
+client.trophy.list(player: 35603)
+```
+
 #### Venue
 
 ```ruby
