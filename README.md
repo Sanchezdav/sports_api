@@ -139,6 +139,7 @@ client.odds_live.list(fixture: '721238')
 
 ```ruby
 client.odds_live_bet.list
+client.odds_live_bet.find(id: 1)
 ```
 
 #### Odds Mapping

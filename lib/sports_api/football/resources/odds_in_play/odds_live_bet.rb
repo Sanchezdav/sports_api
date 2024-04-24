@@ -10,6 +10,11 @@ module SportsApi
         response = get_request('odds/live/bets', params:)
         Collection.from_response(response, type: SportsApi::Football::OddsLiveBet)
       end
+
+      def find(id:)
+        response = get_request('odds/live/bets', params: { id: id.to_s })
+        SportsApi::Football::OddsLiveBet.new(response.body['response'][0])
+      end
     end
   end
 end
