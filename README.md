@@ -129,6 +129,12 @@ client.league_season.list
 client.odds_live.list(fixture: '721238')
 ```
 
+#### Odds Live Bet
+
+```ruby
+client.odds_live_bet.list
+```
+
 #### Player
 
 ```ruby
