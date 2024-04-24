@@ -70,6 +70,10 @@ module SportsApi
         OddsResource.new(self)
       end
 
+      def odds_bookmaker
+        OddsBookmakerResource.new(self)
+      end
+
       def odds_live
         OddsLiveResource.new(self)
       end
