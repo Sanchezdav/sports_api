@@ -1,0 +1,18 @@
+{
+  "get": "odds/bets",
+  "parameters": {
+    "id": "5"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "id": 5,
+      "name": "Goals Over/Under"
+    }
+  ]
+}

@@ -129,6 +129,13 @@ client.league_season.list
 client.odds.list(fixture: '326090', bookmaker: 6)
 ```
 
+#### Odds Bet
+
+```ruby
+client.odds_bet.list(search: 'under')
+client.odds_bet.find(id: 1)
+```
+
 #### Odds Bookmaker
 
 ```ruby
