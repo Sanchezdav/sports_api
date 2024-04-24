@@ -66,6 +66,10 @@ module SportsApi
         LeagueSeasonResource.new(self)
       end
 
+      def odds
+        OddsResource.new(self)
+      end
+
       def odds_live
         OddsLiveResource.new(self)
       end

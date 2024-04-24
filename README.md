@@ -123,6 +123,12 @@ client.league.find(id: 262)
 client.league_season.list
 ```
 
+#### Odds
+
+```ruby
+client.odds.list(fixture: '326090', bookmaker: 6)
+```
+
 #### Odds Live
 
 ```ruby
