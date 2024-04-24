@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class OddsLiveBetResourceTest < Minitest::Test
+class OddsResourceTest < Minitest::Test
   def test_list
     stub = stub_request('odds', response: stub_response(fixture: 'football/odds_pre_match/odds/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)

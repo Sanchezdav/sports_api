@@ -78,6 +78,10 @@ module SportsApi
         OddsLiveBetResource.new(self)
       end
 
+      def odds_mapping
+        OddsMappingResource.new(self)
+      end
+
       def player
         PlayerResource.new(self)
       end

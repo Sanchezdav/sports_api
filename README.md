@@ -141,6 +141,12 @@ client.odds_live.list(fixture: '721238')
 client.odds_live_bet.list
 ```
 
+#### Odds Mapping
+
+```ruby
+client.odds_mapping.list
+```
+
 #### Player
 
 ```ruby
