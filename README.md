@@ -4,6 +4,10 @@ The `sports_api` gem provides a convenient Ruby interface to interact with the [
 
 It currently supports the V3 of [api-sports.io](https://api-sports.io/).
 
+## Getting Started
+
+The best starting point is the Sports API Website, with its introduction and explanation.
+
 ## Features
 
 - Access to a wide range of sports statistics, including live scores and predictions.
@@ -288,6 +292,10 @@ client.leagues.list
 ```
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+### Documentation Site
+
+To run the documentation site locally you have to run `docsify serve docs` and you can check all the content within the `./docs` folder.
 
 ## Contributing
 
