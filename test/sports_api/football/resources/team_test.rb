@@ -6,7 +6,7 @@ class TeamResourceTest < Minitest::Test
   def test_list
     stub = stub_request('teams', response: stub_response(fixture: 'football/teams/team/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.team.list
+    response = client.teams.list
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::Team, response.data.first
@@ -16,7 +16,7 @@ class TeamResourceTest < Minitest::Test
   def test_find
     stub = stub_request('teams', response: stub_response(fixture: 'football/teams/team/find'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.team.find(id: 2287)
+    response = client.teams.find(id: 2287)
 
     assert_instance_of SportsApi::Football::Team, response
     assert_equal 2287, response.team.id

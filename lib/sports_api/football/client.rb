@@ -18,19 +18,19 @@ module SportsApi
         @stubs = stubs
       end
 
-      def coach
+      def coaches
         CoachResource.new(self)
       end
 
-      def country
+      def countries
         CountryResource.new(self)
       end
 
-      def fixture
+      def fixtures
         FixtureResource.new(self)
       end
 
-      def fixture_round
+      def fixture_rounds
         FixtureRoundResource.new(self)
       end
 
@@ -38,31 +38,31 @@ module SportsApi
         FixtureHeadToHeadResource.new(self)
       end
 
-      def fixture_statistic
+      def fixture_statistics
         FixtureStatisticResource.new(self)
       end
 
-      def fixture_event
+      def fixture_events
         FixtureEventResource.new(self)
       end
 
-      def fixture_lineup
+      def fixture_lineups
         FixtureLineupResource.new(self)
       end
 
-      def fixture_player_statistic
+      def fixture_player_statistics
         FixturePlayerStatisticResource.new(self)
       end
 
-      def injury
+      def injuries
         InjuryResource.new(self)
       end
 
-      def league
+      def leagues
         LeagueResource.new(self)
       end
 
-      def league_season
+      def league_seasons
         LeagueSeasonResource.new(self)
       end
 
@@ -70,55 +70,55 @@ module SportsApi
         OddsResource.new(self)
       end
 
-      def odds_bet
+      def odds_bets
         OddsBetResource.new(self)
       end
 
-      def odds_bookmaker
+      def odds_bookmakers
         OddsBookmakerResource.new(self)
       end
 
-      def odds_live
+      def odds_lives
         OddsLiveResource.new(self)
       end
 
-      def odds_live_bet
+      def odds_live_bets
         OddsLiveBetResource.new(self)
       end
 
-      def odds_mapping
+      def odds_mappings
         OddsMappingResource.new(self)
       end
 
-      def player
+      def players
         PlayerResource.new(self)
       end
 
-      def player_top_assist
+      def player_top_assists
         PlayerTopAssistResource.new(self)
       end
 
-      def player_top_scorer
+      def player_top_scorers
         PlayerTopScorerResource.new(self)
       end
 
-      def player_top_red_card
+      def player_top_red_cards
         PlayerTopRedCardResource.new(self)
       end
 
-      def player_top_yellow_card
+      def player_top_yellow_cards
         PlayerTopYellowCardResource.new(self)
       end
 
-      def player_season
+      def player_seasons
         PlayerSeasonResource.new(self)
       end
 
-      def player_squad
+      def player_squads
         PlayerSquadResource.new(self)
       end
 
-      def prediction
+      def predictions
         PredictionResource.new(self)
       end
 
@@ -126,39 +126,39 @@ module SportsApi
         SidelinedResource.new(self)
       end
 
-      def standing
+      def standings
         StandingResource.new(self)
       end
 
-      def team
+      def teams
         TeamResource.new(self)
       end
 
-      def team_statistic
-        TeamStatisticResource.new(self)
-      end
-
-      def team_season
-        TeamSeasonResource.new(self)
-      end
-
-      def team_country
+      def team_countries
         TeamCountryResource.new(self)
       end
 
-      def timezone
+      def team_seasons
+        TeamSeasonResource.new(self)
+      end
+
+      def team_statistics
+        TeamStatisticResource.new(self)
+      end
+
+      def timezones
         TimezoneResource.new(self)
       end
 
-      def transfer
+      def transfers
         TransferResource.new(self)
       end
 
-      def trophy
+      def trophies
         TrophyResource.new(self)
       end
 
-      def venue
+      def venues
         VenueResource.new(self)
       end
 

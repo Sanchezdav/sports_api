@@ -8,7 +8,7 @@ class FixtureLineupResourceTest < Minitest::Test
       'fixtures/lineups', response: stub_response(fixture: 'football/fixtures/fixture_lineup/list')
     )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.fixture_lineup.list(fixture: '592872')
+    response = client.fixture_lineups.list(fixture: '592872')
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::FixtureLineup, response.data.first

@@ -4,12 +4,13 @@ module SportsApi
   module Football
     class LeagueResource < Resource
       # Arguments:
+      # id: [Integer](optional) - The league ID.
       # name: [String](optional) - The name of the league.
       # country: [String] (optional) - The country name of the league.
       # code: [String] (optional) - The country code of the league (= XXX).
       # season: [Integer] (optional) - The season of the league (= YYYY).
       # type: [String] (optional) - The type of the league ["league", "cup"].
-      # current: [Boolean] (optional) - The current status of the league ["true", "false"].
+      # current: [String] (optional) - The current status of the league ["true", "false"].
       # team: [Integer] (optional) - The team ID that has played at least one match.
       # search: [String] (optional) - The league or country name, can be some letters (>= XXX).
       def list(**params)

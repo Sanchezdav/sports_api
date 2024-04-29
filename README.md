@@ -47,30 +47,30 @@ Responses are created as objects like `SportsApi::Football::League`. They're bui
 #### Coach
 
 ```ruby
-client.coach.list(search: 'Tuchel')
-client.coach.find(id: 40)
+client.coaches.list(search: 'Tuchel')
+client.coaches.find(id: 40)
 ```
 
 #### Country
 
 ```ruby
-client.country.list
-client.country.list(search: "Mex")
-client.country.find_by_code(code: "MX")
-client.country.find_by_name(name: "Mexico")
+client.countries.list
+client.countries.list(search: "Mex")
+client.countries.find_by_code(code: "MX")
+client.countries.find_by_name(name: "Mexico")
 ```
 
 #### Fixture
 
 ```ruby
-client.fixture.list(live: "all", league: 262)
-client.fixture.find(id: 1187546)
+client.fixtures.list(live: "all", league: 262)
+client.fixtures.find(id: 1187546)
 ```
 
 #### Fixture Round
 
 ```ruby
-client.fixture_round.list(league: 262, season: 2023)
+client.fixture_rounds.list(league: 262, season: 2023)
 ```
 
 #### Fixture Head to Head
@@ -82,45 +82,45 @@ client.fixture_head_to_head.list(h2h: "2287-2278")
 #### Fixture Statistic
 
 ```ruby
-client.fixture_statistic.list(fixture: '463')
+client.fixture_statistics.list(fixture: '463')
 ```
 
 #### Fixture Event
 
 ```ruby
-client.fixture_event.list(fixture: '215662')
+client.fixture_events.list(fixture: '215662')
 ```
 
 #### Fixture Lineup
 
 ```ruby
-client.fixture_lineup.list(fixture: '592872')
+client.fixture_lineups.list(fixture: '592872')
 ```
 
 #### Fixture Player Statistic
 
 ```ruby
-client.fixture_player_statistic.list(fixture: '169080', team: 2284)
+client.fixture_player_statistics.list(fixture: '169080', team: 2284)
 ```
 
 #### Injury
 
 ```ruby
-client.injury.list(fixture: '686314')
+client.injuries.list(fixture: '686314')
 ```
 
 #### League
 
 ```ruby
-client.league.list
-client.league.list(code: "MX", season: 2023)
-client.league.find(id: 262)
+client.leagues.list
+client.leagues.list(code: "MX", season: 2023)
+client.leagues.find(id: 262)
 ```
 
 #### League Season
 
 ```ruby
-client.league_season.list
+client.league_seasons.list
 ```
 
 #### Odds
@@ -132,84 +132,84 @@ client.odds.list(fixture: '326090', bookmaker: 6)
 #### Odds Bet
 
 ```ruby
-client.odds_bet.list(search: 'under')
-client.odds_bet.find(id: 1)
+client.odds_bets.list(search: 'under')
+client.odds_bets.find(id: 1)
 ```
 
 #### Odds Bookmaker
 
 ```ruby
-client.odds_bookmaker.list
-client.odds_bookmaker.find(id: 8)
+client.odds_bookmakers.list
+client.odds_bookmakers.find(id: 8)
 ```
 
 #### Odds Live
 
 ```ruby
-client.odds_live.list(fixture: '721238')
+client.odds_lives.list(fixture: '721238')
 ```
 
 #### Odds Live Bet
 
 ```ruby
-client.odds_live_bet.list
-client.odds_live_bet.find(id: 1)
+client.odds_live_bets.list
+client.odds_live_bets.find(id: 1)
 ```
 
 #### Odds Mapping
 
 ```ruby
-client.odds_mapping.list
+client.odds_mappings.list
 ```
 
 #### Player
 
 ```ruby
-client.player.list(team: 2287, season: 2023)
-client.player.list(id: 35603, season: 2023)
+client.players.list(team: 2287, season: 2023)
+client.players.list(id: 35603, season: 2023)
 ```
 
 #### Player Season
 
 ```ruby
-client.player_season.list
-client.player_season.list(player: 276)
+client.player_seasons.list
+client.player_seasons.list(player: 276)
 ```
 
 #### Player Squad
 
 ```ruby
-client.player_squad.list(team: 33)
+client.player_squads.list(team: 33)
 ```
 
 #### Player Top Assist
 
 ```ruby
-client.player_top_assist.list(league: 262, season: 2023)
+client.player_top_assists.list(league: 262, season: 2023)
 ```
 
 #### Player Top Scorer
 
 ```ruby
-client.player_top_scorer.list(league: 262, season: 2023)
+client.player_top_scorers.list(league: 262, season: 2023)
 ```
 
 #### Player Top Red Card
 
 ```ruby
-client.player_top_red_card.list(league: 262, season: 2023)
+client.player_top_red_cards.list(league: 262, season: 2023)
 ```
 
 #### Player Top Yellow Card
 
 ```ruby
-client.player_top_yellow_card.list(league: 262, season: 2023)
+client.player_top_yellow_cards.list(league: 262, season: 2023)
 ```
 
 #### Prediction
 
 ```ruby
-client.prediction.list(fixture: '198772')
+client.predictions.list(fixture: '198772')
 ```
 
 #### Sidelined
@@ -221,58 +221,58 @@ client.sidelined.list(player: 35603)
 #### Standing
 
 ```ruby
-client.standing.list(season: 2023, team: 2287)
+client.standings.list(season: 2023, team: 2287)
 ```
 
 #### Team
 
 ```ruby
-client.team.list
-client.team.list(country: "Mexico")
-client.team.find(id: 2287)
+client.teams.list
+client.teams.list(country: "Mexico")
+client.teams.find(id: 2287)
 ```
 
 #### Team Country
 
 ```ruby
-client.team_country.list
+client.team_countries.list
 ```
 
 #### Team Statistic
 
 ```ruby
-client.team_statistic.find(league: 39, team: 33, season: 2019)
+client.team_statistics.find(league: 39, team: 33, season: 2019)
 ```
 
 #### Team Season
 
 ```ruby
-client.team_season.list(team: 2287)
+client.team_seasons.list(team: 2287)
 ```
 
 #### Timezone
 
 ```ruby
-client.timezone.list
+client.timezones.list
 ```
 
 #### Transfer
 
 ```ruby
-client.transfer.list(team: 2287)
+client.transfers.list(team: 2287)
 ```
 
 #### Trophy
 
 ```ruby
-client.trophy.list(player: 35603)
+client.trophies.list(player: 35603)
 ```
 
 #### Venue
 
 ```ruby
-client.venue.list(search: "Mex")
-client.venue.find(id: 556)
+client.venues.list(search: "Mex")
+client.venues.find(id: 556)
 ```
 
 ## Development
@@ -284,7 +284,7 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 client = SportsApi::Football::Client.new(api_key: ENV["SPORTS_API_KEY"])
 
 # List all leagues
-client.league.list
+client.leagues.list
 ```
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).

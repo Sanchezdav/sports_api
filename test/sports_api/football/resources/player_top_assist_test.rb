@@ -9,7 +9,7 @@ class PlayerTopAssistResourceTest < Minitest::Test
       response: stub_response(fixture: 'football/players/player_top_assist/list')
     )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.player_top_assist.list(league: 61, season: 2020)
+    response = client.player_top_assists.list(league: 61, season: 2020)
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::PlayerTopAssist, response.data.first

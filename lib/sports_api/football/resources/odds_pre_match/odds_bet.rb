@@ -4,8 +4,8 @@ module SportsApi
   module Football
     class OddsBetResource < Resource
       # Arguments:
-      # id: [Integer](optional) - The bookmaker ID.
-      # search: [String](optional) - The name of the bookmaker (>= XXX).
+      # id: [Integer](optional) - The bet ID.
+      # search: [String](optional) - The name of the bet (>= XXX).
       def list(**params)
         response = get_request('odds/bets', params:)
         Collection.from_response(response, type: SportsApi::Football::OddsBet)

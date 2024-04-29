@@ -8,7 +8,7 @@ class FixtureStatisticResourceTest < Minitest::Test
       'fixtures/statistics', response: stub_response(fixture: 'football/fixtures/fixture_statistic/list')
     )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.fixture_statistic.list(fixture: '463')
+    response = client.fixture_statistics.list(fixture: '463')
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::FixtureStatistic, response.data.first

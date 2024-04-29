@@ -9,7 +9,7 @@ class OddsBetResourceTest < Minitest::Test
       response: stub_response(fixture: 'football/odds_pre_match/odds_bets/list')
     )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.odds_bet.list(search: 'under')
+    response = client.odds_bets.list(search: 'under')
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::OddsBet, response.data.first
@@ -22,7 +22,7 @@ class OddsBetResourceTest < Minitest::Test
       response: stub_response(fixture: 'football/odds_pre_match/odds_bets/find')
     )
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.odds_bet.find(id: 5)
+    response = client.odds_bets.find(id: 5)
 
     assert_instance_of SportsApi::Football::OddsBet, response
     assert_equal 5, response.id

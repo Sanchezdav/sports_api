@@ -6,7 +6,7 @@ class CountryResourceTest < Minitest::Test
   def test_list
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/list'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.country.list
+    response = client.countries.list
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::Country, response.data.first
@@ -16,7 +16,7 @@ class CountryResourceTest < Minitest::Test
   def test_list_by_search
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/list_by_search'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    response = client.country.list(search: 'Mex')
+    response = client.countries.list(search: 'Mex')
 
     assert_instance_of SportsApi::Collection, response
     assert_instance_of SportsApi::Football::Country, response.data.first
@@ -26,7 +26,7 @@ class CountryResourceTest < Minitest::Test
   def test_find_by_code
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/find_by_code'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    country = client.country.find_by_code(code: 'MX')
+    country = client.countries.find_by_code(code: 'MX')
 
     assert_instance_of SportsApi::Football::Country, country
     assert_equal 'Mexico', country.name
@@ -36,7 +36,7 @@ class CountryResourceTest < Minitest::Test
   def test_find_by_name
     stub = stub_request('countries', response: stub_response(fixture: 'football/countries/find_by_name'))
     client = SportsApi::Football::Client.new(api_key: 'fake', adapter: :test, stubs: stub)
-    country = client.country.find_by_name(name: 'Mexico')
+    country = client.countries.find_by_name(name: 'Mexico')
 
     assert_instance_of SportsApi::Football::Country, country
     assert_equal 'Mexico', country.name

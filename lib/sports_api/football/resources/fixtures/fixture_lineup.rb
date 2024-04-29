@@ -7,7 +7,7 @@ module SportsApi
       # fixture: [Integer](required) - The fixture ID.
       # team: [Integer](optional) - The team ID.
       # player: [Integer](optional) - The player ID.
-      # type: [String](optional) - The type of statistics ["Shots on Goal", "Corner Kicks", etc].
+      # type: [String](optional) - The type of statistics ["Formation", "Coach", "Start XI", "Substitutes"].
       def list(fixture:, **params)
         response = get_request('fixtures/lineups', params: { fixture:, **params })
         Collection.from_response(response, type: SportsApi::Football::FixtureLineup)
