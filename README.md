@@ -6,7 +6,7 @@ It currently supports the V3 of [api-sports.io](https://api-sports.io/).
 
 ## Getting Started
 
-The best starting point is the Sports API Website, with its introduction and explanation.
+The best starting point is the [Sports API Website](https://sanchezdav.github.io/sports_api/#/), with its introduction and explanation.
 
 ## Features
 
