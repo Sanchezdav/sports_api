@@ -10,11 +10,9 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Sports API gem to get data from diverse sports.'
   spec.description = 'Sports API gem to get data from diverse sports like soccer, basketball, baseball, etc.'
-  spec.homepage = 'https://codeando.dev/'
+  spec.homepage = 'https://sanchezdav.github.io/sports_api/#/'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.2.2'
-
-  spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/Sanchezdav/sports_api'
