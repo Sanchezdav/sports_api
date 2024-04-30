@@ -1,4 +1,4 @@
-# SportsApi
+<a href="https://sanchezdav.github.io/sports_api/#/"><img src="./docs/_media/readme-logo.png" align="center" width="50%" height="50%"></a>
 
 The `sports_api` gem provides a convenient Ruby interface to interact with the [api-sports.io](https://api-sports.io/) sports statistics, live scores, and predictions API. It allows developers to easily integrate sports data into their Ruby applications with minimal effort.
 
